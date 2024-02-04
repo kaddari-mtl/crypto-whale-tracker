@@ -1,0 +1,14 @@
+{
+  "name": "whale_tracker",
+  "version": "1.0.0",
+  "description": "Whale Tracker",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Huy Son PHAM",
+  "license": "ISC",
+  "dependencies": {
+    "ethers": "^5.4"
+  }
+}
