@@ -21,6 +21,17 @@ const main = async () => {
     const name = await contract.symbol()
 
     console.log(`The block number ${block} of the most recently mined block for ${name}`)
+
+    contract.on("Transfer", async (from, to, amount, event) => {
+        
+        console.log(`from: ${from}`)
+        console.log(`to: ${to}`)
+        console.log(`amount: ${amount.toNumber()}`)
+        console.log(`event.transactionHash: ${event.transactionHash}`)
+        console.log("\n")
+
+        event.removeListener()
+    })
 }
 
 main()
